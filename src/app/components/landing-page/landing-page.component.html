@@ -1,0 +1,31 @@
+<div class="home-page-box">
+    <div class="home-page">
+        <div class="home-page-top">
+            <div class="img-avatar-box">
+                <img src="../../../assets/images/avata-dn.png" alt="avatar" class="img-avatar">
+            </div>
+            <div class="home-page__titles">
+                <div class="home-page__title" style="font-size: 26px; font-weight: bold;">Dương Nguyễn Rivewer</div>
+                <div class="home-page__title" >Liên hệ làm việc: nguyentrongduong1098@gmail.com</div>
+            </div>
+            <div class="home-page__socials">
+                <div class="home-page__social" (click)="handleClick('facebook')">
+                    <img src="../../../assets/icons/icon-facebook.png" alt="icon-facebook" class="icon-facebook">
+                    <p style="margin: auto 0px;">Link Facebook</p>
+                </div>
+                <div class="home-page__social" (click)="handleClick('tiktok')">
+                    <img src="../../../assets/icons/icon-tiktok.png" alt="icon-tiktok" class="icon-tiktok">
+                    <p style="margin: auto 0px;">Link Tiktok</p>
+                </div>
+            </div>
+        </div>
+        <div class="home-page-body">
+            <div *ngFor="let item of list" class="home-page__product">
+                <div class="product__item">
+                    <div class="product__item-left"></div>
+                    <div class="product__item-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
