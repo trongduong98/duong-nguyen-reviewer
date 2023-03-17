@@ -10,10 +10,10 @@ export class LandingPageComponent implements OnInit {
   public title: string = "";
   public image: string = "";
   public list: any = [
-    { id: 1, name: "Panorama 01", link: "link 001", image:"../assets/images/panorama01.jpg" },
-    { id: 2, name: "Panorama 02", link: "link 001", image:"../assets/images/panorama02.jpg" },
-    { id: 3, name: "Panorama 03", link: "link 001", image:"../assets/images/panorama03.jpg" },
-    { id: 4, name: "Panorama 04", link: "link 001", image:"../assets/images/panorama04.jpg" },
+    { id: 1, name: "Panorama 01", description: "Panorama 01", link: "../assets/images/panorama01.jpg", image:"../assets/images/panorama01.jpg" },
+    { id: 2, name: "Panorama 02", description: "Panorama 02", link: "../assets/images/panorama02.jpg", image:"../assets/images/panorama02.jpg" },
+    { id: 3, name: "Panorama 03", description: "Panorama 03", link: "../assets/images/panorama03.jpg", image:"../assets/images/panorama03.jpg" },
+    { id: 4, name: "Panorama 04", description: "Panorama 04", link: "../assets/images/panorama04.jpg", image:"../assets/images/panorama04.jpg" },
   ];
   constructor() { }
 
