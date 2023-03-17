@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  public isDisplay: boolean = false;
+  public title: string = "";
+  public image: string = "";
   public list: any = [
-    { id: 1, name: "name 001", link: "link 001", image:"iamge 001" },
-    { id: 2, name: "name 001", link: "link 001", image:"iamge 001" },
-    { id: 3, name: "name 001", link: "link 001", image:"iamge 001" },
-    { id: 4, name: "name 001", link: "link 001", image:"iamge 001" },
-    { id: 5, name: "name 001", link: "link 001", image:"iamge 001" },
+    { id: 1, name: "Panorama 01", link: "link 001", image:"../assets/images/panorama01.jpg" },
+    { id: 2, name: "Panorama 02", link: "link 001", image:"../assets/images/panorama02.jpg" },
+    { id: 3, name: "Panorama 03", link: "link 001", image:"../assets/images/panorama03.jpg" },
+    { id: 4, name: "Panorama 04", link: "link 001", image:"../assets/images/panorama04.jpg" },
   ];
   constructor() { }
 
@@ -29,5 +31,18 @@ export class LandingPageComponent implements OnInit {
       default:
         break;
     }
+  }
+
+  public handleShowDialog(item: any) {
+    this.isDisplay = true;
+    console.log('item.name', item.name);
+    console.log('item.image', item.image);
+    
+    this.title = item.name;
+    this.image = item.image;
+  }
+
+  public handleCloseDialog(isDisplay: boolean) {
+    this.isDisplay = isDisplay;
   }
 }

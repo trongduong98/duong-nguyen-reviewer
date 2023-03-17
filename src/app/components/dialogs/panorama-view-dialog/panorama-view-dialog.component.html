@@ -1,0 +1,8 @@
+<p-dialog [(visible)]="isDisplay" (onHide)=handleClose() [style]="{width: '90vw', height: '90vh'}">
+    <ng-template pTemplate="header">
+        <div class="dialog-title">
+            {{title}}  
+        </div>
+    </ng-template>
+    <div #PanoViewer id="viewer"></div>
+</p-dialog>

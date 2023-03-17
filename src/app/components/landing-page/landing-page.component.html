@@ -23,9 +23,16 @@
             <div *ngFor="let item of list" class="home-page__product">
                 <div class="product__item">
                     <div class="product__item-left"></div>
-                    <div class="product__item-right"></div>
+                    <div class="product__item-right" (click)="handleShowDialog(item)"></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-panorama-view-dialog
+    *ngIf="isDisplay"
+    [isDisplay] = "isDisplay"
+    [title] = "title"
+    [image] = "image"
+    (handleCloseDialog) = handleCloseDialog($event)
+></app-panorama-view-dialog>
